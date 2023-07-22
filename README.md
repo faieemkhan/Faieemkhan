@@ -1,5 +1,6 @@
 # 💫 About Me:
-Hii 👋, I'm  Faieem Khan<br><br> 👀 working as a Software Developer Intern at CoreCard Software Inc.<br><br>🌱 I’m currently learning C#, .NET, and RESTful API,angular.<br><br>💬 Ask me about Web Development<br><br>📫 How to reach me faieemk444@gmail.com<br><br>⚡️ Fun fact I love to improve my understanding and competence at every point in life.<br>
+### Hii 👋, I'm  Faieem Khan
+<br><br> 👀 working as a Software Developer Intern at CoreCard Software Inc.<br><br>🌱 I’m currently learning C#, .NET, and RESTful API,angular.<br><br>💬 Ask me about Web Development<br><br>📫 How to reach me faieemk444@gmail.com<br><br>⚡️ Fun fact I love to improve my understanding and competence at every point in life.<br>
 
 
 ## 🌐 Socials:
