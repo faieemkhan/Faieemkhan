@@ -16,7 +16,7 @@ jobs:
       - name: Generate the snake animation
         uses: Platane/snk@v3
         with:
-          github_user_name: username # Replace with your GitHub username
+          github_user_name: faieemkhan # Replace with your GitHub username
           outputs: dist/github-contribution-grid-snake.svg
 
       - name: Push generated snake
