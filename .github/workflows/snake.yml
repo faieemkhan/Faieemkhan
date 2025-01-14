@@ -13,6 +13,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
+      - name: Set Git safe directory
+        run: git config --global --add safe.directory /github/workspace
+
       - name: Generate the snake animation
         uses: Platane/snk@v3
         with:
@@ -25,4 +28,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "Generate snake animation"
           branch: output # Pushes to 'output' branch
-          
