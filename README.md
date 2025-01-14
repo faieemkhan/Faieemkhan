@@ -32,5 +32,6 @@ Find More About me :- [faieem Khan](https://faieemkhan.me/)
   ## 💰 You can help me by Donating
   [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/faieemk444g) 
 
-  
+![GitHub Snake Animation](https://github.com/faieemkhan/faieemkhan/blob/output/github-contribution-grid-snake.svg)
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
