@@ -10,20 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set Git Safe Directory
-        run: git config --global --add safe.directory /github/workspace
-
       - name: Checkout the repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: false
-          fetch-depth: 0
+          persist-credentials: false  # Prevents auth issues
+          fetch-depth: 0  # Fetches all history
 
-      - name: Change Ownership of Repository
-        run: sudo chown -R $(whoami) /github/workspace
-
-      - name: Debug Git Setup
-        run: git config --list --show-origin
+      - name: Debug GitHub Workspace
+        run: ls -lah /github || echo "No /github directory found"
+      
+      - name: Set Git Safe Directory
+        run: git config --global --add safe.directory /github/workspace
 
       - name: Generate the snake animation
         uses: Platane/snk@v3
