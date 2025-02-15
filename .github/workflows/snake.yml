@@ -17,10 +17,10 @@ jobs:
           fetch-depth: 0  # Fetches all history
 
       - name: Debug GitHub Workspace
-        run: ls -lah /github || echo "No /github directory found"
+        run: ls -lah /.github || echo "No /github directory found"
       
       - name: Set Git Safe Directory
-        run: git config --global --add safe.directory /github/workspace
+        run: git config --global --add safe.directory /.github/workspace
 
       - name: Generate the snake animation
         uses: Platane/snk@v3
