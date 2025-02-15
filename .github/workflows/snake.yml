@@ -2,8 +2,8 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Runs daily at midnight
-  workflow_dispatch:  # Allows manual runs
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -13,8 +13,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # Ensure auth for commits
-          fetch-depth: 0  # Fetches all history
+          persist-credentials: true
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Debug GitHub Workspace
         run: |
@@ -24,13 +25,20 @@ jobs:
           whoami
           id
 
-      - name: Set Git Safe Directory  # 🔥 Fix for safe directory error
-        run: git config --global --add safe.directory /github/workspace
+      - name: Set Git Safe Directory
+        run: |
+          git config --global --add safe.directory /github/workspace
+          git config --global --add safe.directory $(pwd)
 
       - name: Configure Git User
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Force Checkout Master Branch
+        run: |
+          git fetch origin master
+          git checkout -B master origin/master || git checkout -B master
 
       - name: Generate the snake animation
         uses: Platane/snk@v3
@@ -43,4 +51,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "Generate snake animation"
-          branch: output  # Pushes to 'output' branch
+          branch: output
