@@ -16,6 +16,12 @@ jobs:
       - name: Set Git safe directory
         run: git config --global --add safe.directory /github/workspace
 
+      - name: Fetch all branches (if needed)
+        run: git fetch --all
+
+      - name: Switch to master branch
+        run: git checkout -B master
+
       - name: Generate the snake animation
         uses: Platane/snk@v3
         with:
